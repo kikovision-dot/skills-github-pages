@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>🎃 Happy Halloween!</title>
+<style>
+  :root{
+    --bg:#0d0714; --panel:#1a0f26; --orange:#ff7518; --purple:#8b5cf6; --text:#f2e9ff;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+    box-sizing:border-box;
+  }
+  html,body{height:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI', system-ui, sans-serif;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    min-height:100%; padding:24px; text-align:center;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(139,92,246,0.15), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(255,117,24,0.15), transparent 40%);
+  }
+  h1{
+    font-size:clamp(1.6rem, 5vw, 2.4rem);
+    margin:0 0 6px;
+    color:var(--orange);
+    text-shadow:0 0 20px rgba(255,117,24,0.5);
+  }
+  p.sub{ color:#c9b8e8; margin:0 0 24px; font-size:1rem; }
+  .frame{
+    width:min(90vw, 720px);
+    aspect-ratio:16/9;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 0 0 2px rgba(255,117,24,0.4), 0 20px 60px rgba(0,0,0,0.6);
+    background:#000;
+  }
+  iframe{ width:100%; height:100%; border:0; display:block; }
+  .frame{
+    position:relative; display:block; text-decoration:none;
+    background:#000; cursor:pointer;
+  }
+  .thumb{ width:100%; height:100%; object-fit:cover; display:block; opacity:0.85; }
+  .playcircle{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:72px; height:72px; border-radius:50%;
+    background:rgba(255,117,24,0.9);
+    color:#1a0f26; font-size:1.6rem;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 30px rgba(255,117,24,0.6);
+    transition:transform 0.15s ease;
+  }
+  .frame:hover .playcircle{ transform:translate(-50%,-50%) scale(1.1); }
+  .btn{
+    margin-top:22px;
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:999px;
+    background:var(--orange);
+    color:#1a0f26;
+    font-weight:700;
+    text-decoration:none;
+    font-size:0.95rem;
+    transition:transform 0.15s ease;
+  }
+  .btn:hover{ transform:scale(1.05); }
+  .ghost{ position:fixed; font-size:2rem; opacity:0.15; pointer-events:none; }
+</style>
+</head>
+<body>
+  <span class="ghost" style="top:8%; left:6%;">👻</span>
+  <span class="ghost" style="bottom:10%; right:8%;">🦇</span>
+  <h1>Happy Halloween! 🎃</h1>
+  <p class="sub">A little something for you...</p>
+  <a class="frame" id="frame" href="https://youtu.be/ojQLPxF6lSU" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/ojQLPxF6lSU/maxresdefault.jpg" alt="" class="thumb">
+    <span class="playcircle">▶</span>
+  </a>
+  <a class="btn" href="https://youtu.be/ojQLPxF6lSU" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+</body>
+</html>
